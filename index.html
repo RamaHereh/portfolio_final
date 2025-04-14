@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rama Hereh - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .carousel-container {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      transition: transform 0.5s ease;
+      display: flex;
+      /* Added for image centering */
+      justify-content: center;
+      /* Horizontally center the image */
+      align-items: center;
+      /* Vertically center the image */
+    }
+
+    .carousel-slide img {
+      max-width: 100%;
+      /* Ensure image doesn't exceed container width */
+      max-height: 400px;
+      /* Limit image height, adjust as needed */
+      object-fit: contain;
+      /* Maintain aspect ratio and fit within container */
+    }
+
+    .carousel-prev,
+    .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 1;
+    }
+
+    .carousel-prev {
+      left: 10px;
+    }
+
+    .carousel-next {
+      right: 10px;
+    }
+
+    .carousel-prev:hover,
+    .carousel-next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .carousel-slide img {
+        max-height: 300px;
+        /* Adjust for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel-slide img {
+        max-height: 200px;
+        /* Adjust for even smaller screens */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Rama Hereh</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Hello, I'm Rama 👋</h2>
+          <p>An Informatics Engineer & Web Developer passionate about creating innovative digital solutions.</p>
+          <a href="#projects" class="button primary">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>I am a graduate in Informatics Engineering with a strong foundation in web development and backend systems.
+            My journey in the tech world is driven by a desire to build impactful and user-friendly applications. I am
+            constantly learning and exploring new technologies to enhance my skills.</p>
+          <p>My core interests lie in creating efficient and scalable backend architectures, as well as developing
+            engaging and responsive front-end experiences. I am a problem-solver at heart and enjoy the challenges of
+            bringing ideas to life through code.</p>
+          <p>Beyond coding, I enjoy [mention your hobbies or interests]. This balance helps me approach my work with
+            creativity and a fresh perspective.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Code on Screen">
+            <h3>Leon Template (Frontend)</h3>
+            <p>A personal portfolio website template built with HTML, CSS, and JavaScript.</p>
+            <div class="project-links">
+              <a href="https://ramahereh.github.io/leon_template/" target="_blank">View Live</a>
+              <a href="https://github.com/RamaHereh/leon_template" target="_blank">View Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Code on Screen">
+            <h3>Invoices System (Backend)</h3>
+            <p>A backend system for managing invoices. Live version is currently unavailable.</p>
+            <div class="project-links">
+              <a href="https://github.com/RamaHereh/invoices-system" target="_blank">View Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Code on Screen">
+            <h3>Hospital System (Backend)</h3>
+            <p>A hospital management backend system. Live version is currently unavailable.</p>
+            <div class="project-links">
+              <a href="https://github.com/RamaHereh/hospital-system" target="_blank">View Code</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Code on Screen">
+            <h3>Messenger App (Backend)</h3>
+            <p>A backend project simulating a basic messaging system. Live version is currently unavailable.</p>
+            <div class="project-links">
+              <a href="https://github.com/RamaHereh/messenger" target="_blank">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
+          <div class="skill-item"><i class="fa-brands fa-js"></i> JSON</div>
+          <div class="skill-item"><i class="fab fa-php"></i> PHP</div>
+          <div class="skill-item"><i class="fab fa-laravel"></i> Laravel</div>
+          <div class="skill-item"><i class="fa-brands fa-jquery"></i> jQuery</div>
+          <div class="skill-item"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+          <div class="skill-item"><i class="fa-brands fa-python"></i> Python</div>
+          <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="carousel" class="section">
+      <div class="container">
+        <h2>More of My Work</h2>
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="imgs/Front-End-Development-in-action.jpg" alt="Multiple Screens">
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/front-end-development-web-application-260nw-1150510607.webp" alt="Programming Code">
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/front-end-development-web-application-260nw-521164462.webp" alt="Abstract Tech Setup">
+          </div>
+          <button class="carousel-prev">&#10094;</button>
+          <button class="carousel-next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-form-container">
+          <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Rama Hereh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const carouselSlides = document.querySelectorAll('.carousel-slide'); // احصل على جميع الشرائح
+    const slides = document.querySelectorAll('.carousel-slide img');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    let counter = 0;
+
+    function updateCarousel() {
+      // تطبيق الترجمة على جميع الشرائح
+      carouselSlides.forEach(slide => {
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+      });
+    }
+
+    nextButton.addEventListener('click', () => {
+      if (counter < slides.length - 1) {
+        counter++;
+      } else {
+        counter = 0; // إذا وصلنا إلى آخر صورة، نرجع إلى الصورة الأولى
+      }
+      updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+      if (counter > 0) {
+        counter--;
+      } else {
+        counter = slides.length - 1; // إذا وصلنا إلى أول صورة، نذهب للصورة الأخيرة
+      }
+      updateCarousel();
+    });
+
+    // الحالة الأولية
+    updateCarousel();
+
+  </script>
+
+</body>
+
+</html>
